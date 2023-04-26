@@ -75,7 +75,8 @@ def spec(message, f=0):
 
                 # Отправляем сообщение специалисту
                 specialist_id = 1629201925
-                bot.send_message(specialist_id, f"Получен новый вопрос:\n\n{message.text}\n\n{user_info}")
+                bot.send_message(specialist_id, "Получен новый вопрос:\n\n{}\n\n{}".format(message.text, user_info))
+
 
                 # Отправляем сообщение пользователю, что его вопрос был успешно отправлен специалисту
                 bot.send_message(chat_id, "Ваш вопрос был успешно отправлен специалисту. Спасибо!", reply_markup=agree_keyboard)
