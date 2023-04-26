@@ -68,7 +68,8 @@ def spec(message, f=0):
             global waiting_for_question
             if waiting_for_question:
                 # Получаем информацию о пользователе, отправившем сообщение
-                user_info = (f"@{message.from_user.username} (id: {message.from_user.id})")
+                user_info = "@{} (id: {})".format(message.from_user.username, message.from_user.id)
+
                 # Сохраняем id чата с пользователем, чтобы отправить ответ в тот же чат
                 chat_id = message.chat.id
 
