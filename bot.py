@@ -74,7 +74,7 @@ def spec(message, f=0):
                 chat_id = message.chat.id
 
                 # Отправляем сообщение специалисту
-                specialist_id = 5863679475
+                specialist_id = 1629201925
                 bot.send_message(specialist_id, f"Получен новый вопрос:\n\n{message.text}\n\n{user_info}")
 
                 # Отправляем сообщение пользователю, что его вопрос был успешно отправлен специалисту
